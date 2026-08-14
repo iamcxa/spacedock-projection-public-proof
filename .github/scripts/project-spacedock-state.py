@@ -788,7 +788,11 @@ def plan_projection(
         if ownership == "linked":
             desired_issue_state = current.get("issue_state", "OPEN") if current else "OPEN"
         else:
-            desired_issue_state = "CLOSED" if entity.get("_archived") else "OPEN"
+            desired_issue_state = (
+                "CLOSED"
+                if entity.get("_archived") or stage == workflow["terminal_stage"]
+                else "OPEN"
+            )
         desired = {
             "identity": identity,
             "title": current.get("title", entity["title"]) if ownership == "linked" and current else entity["title"],

@@ -1,13 +1,13 @@
 {
   "credential": {
-    "expiry": null,
-    "fallback_blast_radius": null,
-    "permissions": null,
-    "rotation_owner": null,
-    "token_type": "unresolved"
+    "expiry": "2026-08-21",
+    "fallback_blast_radius": "All user-owned Projects accessible to this classic PAT; no repository scope",
+    "permissions": "project",
+    "rotation_owner": "iamcxa",
+    "token_type": "classic-pat"
   },
   "entity_selection": [],
-  "external_apply_enabled": false,
+  "external_apply_enabled": true,
   "profile": "generic",
   "project": {
     "node_id": "PVT_kwHOABc8eM4BgT1O",
@@ -15,7 +15,7 @@
     "owner": "iamcxa",
     "owner_type": "user"
   },
-  "project_secret_name": "GITHUB_TOKEN",
+  "project_secret_name": "SPACEDOCK_PROJECT_TOKEN",
   "repository": "iamcxa/spacedock-projection-public-proof",
   "schedule_interval_minutes": 5,
   "schema": "spacedock-project-config/v1",
